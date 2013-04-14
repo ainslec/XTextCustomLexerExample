@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.consoli.attributes
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.consoli.attributes; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types
+Import-Package: org.apache.log4j,
+ org.eclipse.xtext.xbase.lib
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.consoli.customlexerexample,
+ org.consoli.customlexerexample.services,
+ org.consoli.customlexerexample.attributes,
+ org.consoli.customlexerexample.attributes.impl,
+ org.consoli.customlexerexample.attributes.util,
+ org.consoli.customlexerexample.serializer,
+ org.consoli.customlexerexample.parser.antlr,
+ org.consoli.customlexerexample.parser.antlr.internal,
+ org.consoli.customlexerexample.validation,
+ org.consoli.customlexerexample.scoping,
+ org.consoli.customlexerexample.generator,
+ org.consoli.customlexerexample.formatting,
+ org.consoli.customlexerexample.parser.antlr.lexer
+

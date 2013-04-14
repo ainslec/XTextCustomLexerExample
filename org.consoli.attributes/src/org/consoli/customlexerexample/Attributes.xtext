@@ -1,0 +1,21 @@
+grammar org.consoli.customlexerexample.Attributes with org.eclipse.xtext.common.Terminals
+
+generate attributes "http://www.consoli.org/customlexerexample/Attributes"
+
+Model:
+	attributes+=Attribute*;
+	
+Attribute:
+	SimpleAttribute | ArrayAttribute
+;	
+
+SimpleAttribute:
+	name=ID value=PROPERTY_VALUE
+;
+
+ArrayAttribute:
+	name=ID '[' ']' '=' (items+=STRING)? (',' items+=STRING)*
+;
+	
+terminal PROPERTY_VALUE:
+	('=') !('\n' | '\r')* ('\r'? '\n')?;
