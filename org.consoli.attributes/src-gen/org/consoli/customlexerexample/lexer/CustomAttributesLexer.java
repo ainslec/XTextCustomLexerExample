@@ -27,6 +27,7 @@ public class CustomAttributesLexer extends Lexer {
     public static final int RULE_ML_COMMENT=12;
 
       private boolean isArray = false;
+      private boolean isAttributeValue = false;
 
 
     // delegates
@@ -47,9 +48,12 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_1;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:18:11: ( ',' )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:18:13: ','
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:19:11: ({...}? => ',' )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:19:13: {...}? => ','
             {
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "KEYWORD_1", "!isAttributeValue");
+            }
             match(','); 
 
             }
@@ -67,10 +71,14 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_2;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:20:11: ( '=' )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:20:13: '='
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:21:11: ({...}? => '=' )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:21:13: {...}? => '='
             {
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "KEYWORD_2", "!isAttributeValue");
+            }
             match('='); 
+             if (!isArray) {isAttributeValue = true;} 
 
             }
 
@@ -87,9 +95,12 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_3;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:22:11: ( '[' )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:22:13: '['
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:23:11: ({...}? => '[' )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:23:13: {...}? => '['
             {
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "KEYWORD_3", "!isAttributeValue");
+            }
             match('['); 
 
             }
@@ -107,9 +118,12 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_4;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:24:11: ( ']' )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:24:13: ']'
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:25:11: ({...}? => ']' )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:25:13: {...}? => ']'
             {
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "KEYWORD_4", "!isAttributeValue");
+            }
             match(']'); 
              isArray = true; 
 
@@ -128,14 +142,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_PROPERTY_VALUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:28:21: ({...}? => '=' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:28:23: {...}? => '=' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:29:21: ({...}? => (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:29:23: {...}? => (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
-            if ( !((!isArray)) ) {
-                throw new FailedPredicateException(input, "RULE_PROPERTY_VALUE", "!isArray");
+            if ( !((isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "RULE_PROPERTY_VALUE", "isAttributeValue");
             }
-            match('='); 
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:28:41: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:29:45: (~ ( ( '\\n' | '\\r' ) ) )*
             loop1:
             do {
                 int alt1=2;
@@ -148,7 +161,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:28:41: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:29:45: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -168,7 +181,7 @@ public class CustomAttributesLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:28:57: ( ( '\\r' )? '\\n' )?
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:29:61: ( ( '\\r' )? '\\n' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -177,9 +190,9 @@ public class CustomAttributesLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:28:58: ( '\\r' )? '\\n'
+                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:29:62: ( '\\r' )? '\\n'
                     {
-                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:28:58: ( '\\r' )?
+                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:29:62: ( '\\r' )?
                     int alt2=2;
                     int LA2_0 = input.LA(1);
 
@@ -188,7 +201,7 @@ public class CustomAttributesLexer extends Lexer {
                     }
                     switch (alt2) {
                         case 1 :
-                            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:28:58: '\\r'
+                            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:29:62: '\\r'
                             {
                             match('\r'); 
 
@@ -204,6 +217,7 @@ public class CustomAttributesLexer extends Lexer {
 
             }
 
+            isAttributeValue = false;
 
             }
 
@@ -220,10 +234,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:30:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:30:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:31:9: ({...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:31:11: {...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:30:11: ( '^' )?
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "RULE_ID", "!isAttributeValue");
+            }
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:31:34: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -232,7 +249,7 @@ public class CustomAttributesLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:30:11: '^'
+                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:31:34: '^'
                     {
                     match('^'); 
 
@@ -250,7 +267,7 @@ public class CustomAttributesLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:30:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:31:63: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -300,10 +317,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:32:10: ( ( '0' .. '9' )+ )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:32:12: ( '0' .. '9' )+
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:33:10: ({...}? => ( '0' .. '9' )+ )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:33:12: {...}? => ( '0' .. '9' )+
             {
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:32:12: ( '0' .. '9' )+
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "RULE_INT", "!isAttributeValue");
+            }
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:33:35: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -317,7 +337,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:32:13: '0' .. '9'
+            	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:33:36: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -349,10 +369,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:13: ({...}? => ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:15: {...}? => ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "RULE_STRING", "!isAttributeValue");
+            }
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:38: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -370,10 +393,10 @@ public class CustomAttributesLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:39: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:43: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -389,7 +412,7 @@ public class CustomAttributesLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:44: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -405,7 +428,7 @@ public class CustomAttributesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:89: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -430,10 +453,10 @@ public class CustomAttributesLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:109: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:114: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -449,7 +472,7 @@ public class CustomAttributesLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:115: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -465,7 +488,7 @@ public class CustomAttributesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:34:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:35:160: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -508,12 +531,15 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:36:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:36:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:37:17: ({...}? => '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:37:19: {...}? => '/*' ( options {greedy=false; } : . )* '*/'
             {
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "RULE_ML_COMMENT", "!isAttributeValue");
+            }
             match("/*"); 
 
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:36:24: ( options {greedy=false; } : . )*
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:37:47: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -538,7 +564,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:36:52: .
+            	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:37:75: .
             	    {
             	    matchAny(); 
 
@@ -568,12 +594,15 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:38:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:38:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:39:17: ({...}? => '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:39:19: {...}? => '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "RULE_SL_COMMENT", "!isAttributeValue");
+            }
             match("//"); 
 
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:38:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:39:47: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -586,7 +615,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:38:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:39:47: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -606,7 +635,7 @@ public class CustomAttributesLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:38:40: ( ( '\\r' )? '\\n' )?
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:39:63: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -615,9 +644,9 @@ public class CustomAttributesLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:38:41: ( '\\r' )? '\\n'
+                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:39:64: ( '\\r' )? '\\n'
                     {
-                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:38:41: ( '\\r' )?
+                    // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:39:64: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -626,7 +655,7 @@ public class CustomAttributesLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:38:41: '\\r'
+                            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:39:64: '\\r'
                             {
                             match('\r'); 
 
@@ -658,10 +687,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:40:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:40:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:41:9: ({...}? => ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:41:11: {...}? => ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:40:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            if ( !((!isAttributeValue)) ) {
+                throw new FailedPredicateException(input, "RULE_WS", "!isAttributeValue");
+            }
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:41:34: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -715,8 +747,8 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:42:16: ( . )
-            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:42:18: .
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:43:16: ( . )
+            // ../org.consoli.attributes/src/org/consoli/customlexerexample/lexer/CustomAttributesLexer.g:43:18: .
             {
             matchAny(); 
 
@@ -827,46 +859,106 @@ public class CustomAttributesLexer extends Lexer {
 
     protected DFA15 dfa15 = new DFA15(this);
     static final String DFA15_eotS =
-        "\2\uffff\1\17\2\uffff\1\14\2\uffff\3\14\15\uffff";
+        "\1\10\1\20\1\21\1\22\1\23\1\25\1\27\1\31\1\uffff\1\32\1\34\3\25"+
+        "\1\31\1\25\4\uffff\1\61\1\uffff\1\62\4\uffff\1\61\1\uffff\1\65\1"+
+        "\10\1\uffff\1\70\3\10\1\uffff\1\70\3\10\1\101\1\30\1\62\12\uffff"+
+        "\1\10\2\uffff\2\10\1\uffff\2\10\1\101\1\uffff\1\101\1\uffff\1\105"+
+        "\3\uffff";
     static final String DFA15_eofS =
-        "\30\uffff";
+        "\106\uffff";
     static final String DFA15_minS =
-        "\1\0\1\uffff\1\0\2\uffff\1\101\2\uffff\2\0\1\52\15\uffff";
+        "\6\0\2\11\1\uffff\15\0\1\11\1\0\1\uffff\5\0\1\42\4\0\1\42\6\0\1"+
+        "\12\1\0\5\uffff\2\0\2\uffff\2\0\1\uffff\7\0\1\12\3\0\2\uffff\1\0";
     static final String DFA15_maxS =
-        "\1\uffff\1\uffff\1\uffff\2\uffff\1\172\2\uffff\2\uffff\1\57\15"+
-        "\uffff";
+        "\6\uffff\2\40\1\uffff\7\uffff\4\0\1\uffff\1\0\1\40\1\0\1\uffff"+
+        "\2\0\1\uffff\1\0\1\uffff\1\165\4\uffff\1\165\6\uffff\1\12\1\uffff"+
+        "\5\uffff\2\0\2\uffff\1\0\1\uffff\1\uffff\1\0\6\uffff\1\12\2\0\1"+
+        "\uffff\2\uffff\1\0";
     static final String DFA15_acceptS =
-        "\1\uffff\1\1\1\uffff\1\3\1\4\1\uffff\1\6\1\7\3\uffff\1\13\1\14"+
-        "\1\1\1\5\1\2\1\3\1\4\1\6\1\7\1\10\1\11\1\12\1\13";
+        "\10\uffff\1\5\17\uffff\1\13\23\uffff\1\1\1\14\1\2\1\3\1\4\2\uffff"+
+        "\1\6\1\7\2\uffff\1\10\13\uffff\1\11\1\12\1\uffff";
     static final String DFA15_specialS =
-        "\1\3\1\uffff\1\1\5\uffff\1\0\1\2\16\uffff}>";
+        "\1\66\1\67\1\10\1\14\1\63\1\23\1\20\1\37\1\uffff\1\51\1\2\1\34"+
+        "\1\43\1\60\1\7\1\1\1\41\1\42\1\45\1\46\1\5\1\24\1\6\1\17\1\uffff"+
+        "\1\27\1\44\1\71\1\31\1\21\1\33\1\50\1\26\1\40\1\64\1\70\1\15\1\52"+
+        "\1\35\1\4\1\61\1\11\1\12\1\47\5\uffff\1\62\1\22\2\uffff\1\54\1\53"+
+        "\1\uffff\1\55\1\0\1\36\1\13\1\3\1\32\1\25\1\16\1\30\1\57\1\65\2"+
+        "\uffff\1\56}>";
     static final String[] DFA15_transitionS = {
-            "\11\14\2\13\2\14\1\13\22\14\1\13\1\14\1\10\4\14\1\11\4\14\1"+
-            "\1\2\14\1\12\12\7\3\14\1\2\3\14\32\6\1\3\1\14\1\4\1\5\1\6\1"+
-            "\14\32\6\uff85\14",
+            "\11\17\1\16\1\7\2\17\1\6\22\17\1\16\1\17\1\13\4\17\1\14\4\17"+
+            "\1\1\2\17\1\15\12\12\3\17\1\2\3\17\32\11\1\3\1\17\1\4\1\5\1"+
+            "\11\1\17\32\11\uff85\17",
+            "\0\10",
+            "\0\10",
+            "\0\10",
+            "\0\10",
+            "\101\10\32\24\4\10\1\24\1\10\32\24\uff85\10",
+            "\1\30\1\26\2\uffff\1\30\22\uffff\1\30",
+            "\2\30\2\uffff\1\30\22\uffff\1\30",
             "",
-            "\0\16",
+            "\60\10\12\33\7\10\32\33\4\10\1\33\1\10\32\33\uff85\10",
+            "\60\10\12\35\uffc6\10",
+            "\12\42\1\41\2\42\1\37\24\42\1\40\71\42\1\36\uffa3\42",
+            "\12\47\1\46\2\47\1\44\31\47\1\45\64\47\1\43\uffa3\47",
+            "\52\10\1\50\4\10\1\51\uffd0\10",
+            "\11\10\1\53\1\26\2\10\1\52\22\10\1\53\uffdf\10",
+            "\0\10",
+            "\1\uffff",
+            "\1\uffff",
+            "\1\uffff",
+            "\1\uffff",
+            "\60\10\12\33\7\10\32\33\4\10\1\33\1\10\32\33\uff85\10",
+            "\1\uffff",
+            "\2\30\2\uffff\1\30\22\uffff\1\30",
+            "\1\uffff",
+            "",
+            "\1\uffff",
+            "\1\uffff",
+            "\60\10\12\33\7\10\32\33\4\10\1\33\1\10\32\33\uff85\10",
+            "\1\uffff",
+            "\60\10\12\35\uffc6\10",
+            "\1\66\4\uffff\1\66\64\uffff\1\66\5\uffff\1\66\3\uffff\1\66"+
+            "\7\uffff\1\66\3\uffff\1\66\1\uffff\2\66",
+            "\12\67\1\41\ufff5\67",
+            "\0\10",
+            "\0\67",
+            "\12\42\1\41\2\42\1\37\24\42\1\40\71\42\1\36\uffa3\42",
+            "\1\71\4\uffff\1\71\64\uffff\1\71\5\uffff\1\71\3\uffff\1\71"+
+            "\7\uffff\1\71\3\uffff\1\71\1\uffff\2\71",
+            "\12\67\1\46\ufff5\67",
+            "\0\10",
+            "\0\67",
+            "\12\47\1\46\2\47\1\44\31\47\1\45\64\47\1\43\uffa3\47",
+            "\12\75\1\74\2\75\1\73\34\75\1\72\uffd5\75",
+            "\12\76\1\100\2\76\1\77\ufff2\76",
+            "\1\26",
+            "\11\10\1\53\1\26\2\10\1\52\22\10\1\53\uffdf\10",
             "",
             "",
-            "\32\22\4\uffff\1\22\1\uffff\32\22",
-            "",
-            "",
-            "\0\24",
-            "\0\24",
-            "\1\25\4\uffff\1\26",
             "",
             "",
             "",
+            "\1\uffff",
+            "\1\uffff",
             "",
             "",
+            "\1\uffff",
+            "\12\42\1\41\2\42\1\37\24\42\1\40\71\42\1\36\uffa3\42",
+            "",
+            "\1\uffff",
+            "\12\47\1\46\2\47\1\44\31\47\1\45\64\47\1\43\uffa3\47",
+            "\12\75\1\74\2\75\1\73\34\75\1\72\4\75\1\102\uffd0\75",
+            "\12\103\1\74\ufff5\103",
+            "\0\103",
+            "\12\75\1\74\2\75\1\73\34\75\1\72\uffd5\75",
+            "\12\76\1\100\2\76\1\77\ufff2\76",
+            "\1\100",
+            "\1\uffff",
+            "\1\uffff",
+            "\12\75\1\74\2\75\1\73\34\75\1\72\uffd5\75",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "\1\uffff"
     };
 
     static final short[] DFA15_eot = DFA.unpackEncodedString(DFA15_eotS);
@@ -906,43 +998,941 @@ public class CustomAttributesLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA15_8 = input.LA(1);
+                        int LA15_57 = input.LA(1);
 
+                         
+                        int index15_57 = input.index();
+                        input.rewind();
                         s = -1;
-                        if ( ((LA15_8>='\u0000' && LA15_8<='\uFFFF')) ) {s = 20;}
+                        if ( (LA15_57=='\'') && (((!isAttributeValue)||(isAttributeValue)))) {s = 37;}
 
-                        else s = 12;
+                        else if ( (LA15_57=='\\') && (((!isAttributeValue)||(isAttributeValue)))) {s = 35;}
 
+                        else if ( (LA15_57=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 36;}
+
+                        else if ( (LA15_57=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 38;}
+
+                        else if ( ((LA15_57>='\u0000' && LA15_57<='\t')||(LA15_57>='\u000B' && LA15_57<='\f')||(LA15_57>='\u000E' && LA15_57<='&')||(LA15_57>='(' && LA15_57<='[')||(LA15_57>=']' && LA15_57<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 39;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_57);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
+                        int LA15_15 = input.LA(1);
+
+                         
+                        int index15_15 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_15>='\u0000' && LA15_15<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 21;
+
+                         
+                        input.seek(index15_15);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA15_10 = input.LA(1);
+
+                         
+                        int index15_10 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_10>='0' && LA15_10<='9')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 29;}
+
+                        else if ( ((LA15_10>='\u0000' && LA15_10<='/')||(LA15_10>=':' && LA15_10<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 28;
+
+                         
+                        input.seek(index15_10);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA15_60 = input.LA(1);
+
+                         
+                        int index15_60 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_60>='\u0000' && LA15_60<='\uFFFF')) && ((!isAttributeValue))) {s = 67;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_60);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA15_39 = input.LA(1);
+
+                         
+                        int index15_39 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_39=='\'') && (((!isAttributeValue)||(isAttributeValue)))) {s = 37;}
+
+                        else if ( (LA15_39=='\\') && (((!isAttributeValue)||(isAttributeValue)))) {s = 35;}
+
+                        else if ( (LA15_39=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 36;}
+
+                        else if ( (LA15_39=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 38;}
+
+                        else if ( ((LA15_39>='\u0000' && LA15_39<='\t')||(LA15_39>='\u000B' && LA15_39<='\f')||(LA15_39>='\u000E' && LA15_39<='&')||(LA15_39>='(' && LA15_39<='[')||(LA15_39>=']' && LA15_39<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 39;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_39);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA15_20 = input.LA(1);
+
+                         
+                        int index15_20 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_20>='0' && LA15_20<='9')||(LA15_20>='A' && LA15_20<='Z')||LA15_20=='_'||(LA15_20>='a' && LA15_20<='z')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 27;}
+
+                        else if ( ((LA15_20>='\u0000' && LA15_20<='/')||(LA15_20>=':' && LA15_20<='@')||(LA15_20>='[' && LA15_20<='^')||LA15_20=='`'||(LA15_20>='{' && LA15_20<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 49;
+
+                         
+                        input.seek(index15_20);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA15_22 = input.LA(1);
+
+                         
+                        int index15_22 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_22>='\t' && LA15_22<='\n')||LA15_22=='\r'||LA15_22==' ') && ((!isAttributeValue))) {s = 24;}
+
+                        else s = 50;
+
+                         
+                        input.seek(index15_22);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA15_14 = input.LA(1);
+
+                         
+                        int index15_14 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_14=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 42;}
+
+                        else if ( (LA15_14=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 22;}
+
+                        else if ( (LA15_14=='\t'||LA15_14==' ') && (((!isAttributeValue)||(isAttributeValue)))) {s = 43;}
+
+                        else if ( ((LA15_14>='\u0000' && LA15_14<='\b')||(LA15_14>='\u000B' && LA15_14<='\f')||(LA15_14>='\u000E' && LA15_14<='\u001F')||(LA15_14>='!' && LA15_14<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 25;
+
+                         
+                        input.seek(index15_14);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 8 : 
                         int LA15_2 = input.LA(1);
 
                          
                         int index15_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( ((LA15_2>='\u0000' && LA15_2<='\uFFFF')) && ((!isArray))) {s = 14;}
+                        if ( ((LA15_2>='\u0000' && LA15_2<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
 
-                        else s = 15;
+                        else s = 17;
 
                          
                         input.seek(index15_2);
                         if ( s>=0 ) return s;
                         break;
-                    case 2 : 
-                        int LA15_9 = input.LA(1);
+                    case 9 : 
+                        int LA15_41 = input.LA(1);
 
+                         
+                        int index15_41 = input.index();
+                        input.rewind();
                         s = -1;
-                        if ( ((LA15_9>='\u0000' && LA15_9<='\uFFFF')) ) {s = 20;}
+                        if ( ((LA15_41>='\u0000' && LA15_41<='\t')||(LA15_41>='\u000B' && LA15_41<='\f')||(LA15_41>='\u000E' && LA15_41<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 62;}
 
-                        else s = 12;
+                        else if ( (LA15_41=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 63;}
 
+                        else if ( (LA15_41=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 64;}
+
+                        else s = 65;
+
+                         
+                        input.seek(index15_41);
                         if ( s>=0 ) return s;
                         break;
-                    case 3 : 
+                    case 10 : 
+                        int LA15_42 = input.LA(1);
+
+                         
+                        int index15_42 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_42=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 22;}
+
+                        else s = 24;
+
+                         
+                        input.seek(index15_42);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 11 : 
+                        int LA15_59 = input.LA(1);
+
+                         
+                        int index15_59 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_59=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 60;}
+
+                        else if ( ((LA15_59>='\u0000' && LA15_59<='\t')||(LA15_59>='\u000B' && LA15_59<='\uFFFF')) && ((!isAttributeValue))) {s = 67;}
+
+                         
+                        input.seek(index15_59);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 12 : 
+                        int LA15_3 = input.LA(1);
+
+                         
+                        int index15_3 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_3>='\u0000' && LA15_3<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 18;
+
+                         
+                        input.seek(index15_3);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 13 : 
+                        int LA15_36 = input.LA(1);
+
+                         
+                        int index15_36 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_36=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 38;}
+
+                        else if ( ((LA15_36>='\u0000' && LA15_36<='\t')||(LA15_36>='\u000B' && LA15_36<='\uFFFF')) && ((!isAttributeValue))) {s = 55;}
+
+                         
+                        input.seek(index15_36);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 14 : 
+                        int LA15_63 = input.LA(1);
+
+                         
+                        int index15_63 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_63=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 64;}
+
+                         
+                        input.seek(index15_63);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 15 : 
+                        int LA15_23 = input.LA(1);
+
+                         
+                        int index15_23 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!isAttributeValue)) ) {s = 24;}
+
+                        else if ( (true) ) {s = 45;}
+
+                         
+                        input.seek(index15_23);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 16 : 
+                        int LA15_6 = input.LA(1);
+
+                         
+                        int index15_6 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_6=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 22;}
+
+                        else if ( (LA15_6=='\t'||LA15_6=='\r'||LA15_6==' ') && ((!isAttributeValue))) {s = 24;}
+
+                        else s = 23;
+
+                         
+                        input.seek(index15_6);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 17 : 
+                        int LA15_29 = input.LA(1);
+
+                         
+                        int index15_29 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_29>='0' && LA15_29<='9')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 29;}
+
+                        else if ( ((LA15_29>='\u0000' && LA15_29<='/')||(LA15_29>=':' && LA15_29<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 53;
+
+                         
+                        input.seek(index15_29);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 18 : 
+                        int LA15_50 = input.LA(1);
+
+                         
+                        int index15_50 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( ((!isAttributeValue)) ) {s = 24;}
+
+                         
+                        input.seek(index15_50);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 19 : 
+                        int LA15_5 = input.LA(1);
+
+                         
+                        int index15_5 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_5>='A' && LA15_5<='Z')||LA15_5=='_'||(LA15_5>='a' && LA15_5<='z')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 20;}
+
+                        else if ( ((LA15_5>='\u0000' && LA15_5<='@')||(LA15_5>='[' && LA15_5<='^')||LA15_5=='`'||(LA15_5>='{' && LA15_5<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 21;
+
+                         
+                        input.seek(index15_5);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 20 : 
+                        int LA15_21 = input.LA(1);
+
+                         
+                        int index15_21 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( (true) ) {s = 45;}
+
+                         
+                        input.seek(index15_21);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 21 : 
+                        int LA15_62 = input.LA(1);
+
+                         
+                        int index15_62 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_62=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 63;}
+
+                        else if ( (LA15_62=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 64;}
+
+                        else if ( ((LA15_62>='\u0000' && LA15_62<='\t')||(LA15_62>='\u000B' && LA15_62<='\f')||(LA15_62>='\u000E' && LA15_62<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 62;}
+
+                        else s = 65;
+
+                         
+                        input.seek(index15_62);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 22 : 
+                        int LA15_32 = input.LA(1);
+
+                         
+                        int index15_32 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_32>='\u0000' && LA15_32<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 56;
+
+                         
+                        input.seek(index15_32);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 23 : 
+                        int LA15_25 = input.LA(1);
+
+                         
+                        int index15_25 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( ((!isAttributeValue)) ) {s = 24;}
+
+                        else if ( (true) ) {s = 45;}
+
+                         
+                        input.seek(index15_25);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 24 : 
+                        int LA15_64 = input.LA(1);
+
+                         
+                        int index15_64 = input.index();
+                        input.rewind();
+                        s = -1;
+                        s = 65;
+
+                         
+                        input.seek(index15_64);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 25 : 
+                        int LA15_28 = input.LA(1);
+
+                         
+                        int index15_28 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( ((!isAttributeValue)) ) {s = 52;}
+
+                        else if ( (true) ) {s = 45;}
+
+                         
+                        input.seek(index15_28);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 26 : 
+                        int LA15_61 = input.LA(1);
+
+                         
+                        int index15_61 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_61=='*') && (((!isAttributeValue)||(isAttributeValue)))) {s = 58;}
+
+                        else if ( (LA15_61=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 59;}
+
+                        else if ( (LA15_61=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 60;}
+
+                        else if ( ((LA15_61>='\u0000' && LA15_61<='\t')||(LA15_61>='\u000B' && LA15_61<='\f')||(LA15_61>='\u000E' && LA15_61<=')')||(LA15_61>='+' && LA15_61<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 61;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_61);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 27 : 
+                        int LA15_30 = input.LA(1);
+
+                         
+                        int index15_30 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_30=='\"'||LA15_30=='\''||LA15_30=='\\'||LA15_30=='b'||LA15_30=='f'||LA15_30=='n'||LA15_30=='r'||(LA15_30>='t' && LA15_30<='u')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 54;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_30);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 28 : 
+                        int LA15_11 = input.LA(1);
+
+                         
+                        int index15_11 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_11=='\\') && (((!isAttributeValue)||(isAttributeValue)))) {s = 30;}
+
+                        else if ( (LA15_11=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 31;}
+
+                        else if ( (LA15_11=='\"') && (((!isAttributeValue)||(isAttributeValue)))) {s = 32;}
+
+                        else if ( (LA15_11=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 33;}
+
+                        else if ( ((LA15_11>='\u0000' && LA15_11<='\t')||(LA15_11>='\u000B' && LA15_11<='\f')||(LA15_11>='\u000E' && LA15_11<='!')||(LA15_11>='#' && LA15_11<='[')||(LA15_11>=']' && LA15_11<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 34;}
+
+                        else s = 21;
+
+                         
+                        input.seek(index15_11);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 29 : 
+                        int LA15_38 = input.LA(1);
+
+                         
+                        int index15_38 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_38>='\u0000' && LA15_38<='\uFFFF')) && ((!isAttributeValue))) {s = 55;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_38);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 30 : 
+                        int LA15_58 = input.LA(1);
+
+                         
+                        int index15_58 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_58=='/') && (((!isAttributeValue)||(isAttributeValue)))) {s = 66;}
+
+                        else if ( (LA15_58=='*') && (((!isAttributeValue)||(isAttributeValue)))) {s = 58;}
+
+                        else if ( (LA15_58=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 59;}
+
+                        else if ( (LA15_58=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 60;}
+
+                        else if ( ((LA15_58>='\u0000' && LA15_58<='\t')||(LA15_58>='\u000B' && LA15_58<='\f')||(LA15_58>='\u000E' && LA15_58<=')')||(LA15_58>='+' && LA15_58<='.')||(LA15_58>='0' && LA15_58<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 61;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_58);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 31 : 
+                        int LA15_7 = input.LA(1);
+
+                         
+                        int index15_7 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_7>='\t' && LA15_7<='\n')||LA15_7=='\r'||LA15_7==' ') && ((!isAttributeValue))) {s = 24;}
+
+                        else s = 25;
+
+                         
+                        input.seek(index15_7);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 32 : 
+                        int LA15_33 = input.LA(1);
+
+                         
+                        int index15_33 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_33>='\u0000' && LA15_33<='\uFFFF')) && ((!isAttributeValue))) {s = 55;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_33);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 33 : 
+                        int LA15_16 = input.LA(1);
+
+                         
+                        int index15_16 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!isAttributeValue)) ) {s = 44;}
+
+                        else if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( (true) ) {s = 45;}
+
+                         
+                        input.seek(index15_16);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 34 : 
+                        int LA15_17 = input.LA(1);
+
+                         
+                        int index15_17 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!isAttributeValue)) ) {s = 46;}
+
+                        else if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( (true) ) {s = 45;}
+
+                         
+                        input.seek(index15_17);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 35 : 
+                        int LA15_12 = input.LA(1);
+
+                         
+                        int index15_12 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_12=='\\') && (((!isAttributeValue)||(isAttributeValue)))) {s = 35;}
+
+                        else if ( (LA15_12=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 36;}
+
+                        else if ( (LA15_12=='\'') && (((!isAttributeValue)||(isAttributeValue)))) {s = 37;}
+
+                        else if ( (LA15_12=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 38;}
+
+                        else if ( ((LA15_12>='\u0000' && LA15_12<='\t')||(LA15_12>='\u000B' && LA15_12<='\f')||(LA15_12>='\u000E' && LA15_12<='&')||(LA15_12>='(' && LA15_12<='[')||(LA15_12>=']' && LA15_12<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 39;}
+
+                        else s = 21;
+
+                         
+                        input.seek(index15_12);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 36 : 
+                        int LA15_26 = input.LA(1);
+
+                         
+                        int index15_26 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( ((!isAttributeValue)) ) {s = 51;}
+
+                        else if ( (true) ) {s = 45;}
+
+                         
+                        input.seek(index15_26);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 37 : 
+                        int LA15_18 = input.LA(1);
+
+                         
+                        int index15_18 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!isAttributeValue)) ) {s = 47;}
+
+                        else if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( (true) ) {s = 45;}
+
+                         
+                        input.seek(index15_18);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 38 : 
+                        int LA15_19 = input.LA(1);
+
+                         
+                        int index15_19 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((!isAttributeValue)) ) {s = 48;}
+
+                        else if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( (true) ) {s = 45;}
+
+                         
+                        input.seek(index15_19);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 39 : 
+                        int LA15_43 = input.LA(1);
+
+                         
+                        int index15_43 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_43=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 42;}
+
+                        else if ( (LA15_43=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 22;}
+
+                        else if ( (LA15_43=='\t'||LA15_43==' ') && (((!isAttributeValue)||(isAttributeValue)))) {s = 43;}
+
+                        else if ( ((LA15_43>='\u0000' && LA15_43<='\b')||(LA15_43>='\u000B' && LA15_43<='\f')||(LA15_43>='\u000E' && LA15_43<='\u001F')||(LA15_43>='!' && LA15_43<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 50;
+
+                         
+                        input.seek(index15_43);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 40 : 
+                        int LA15_31 = input.LA(1);
+
+                         
+                        int index15_31 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_31=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 33;}
+
+                        else if ( ((LA15_31>='\u0000' && LA15_31<='\t')||(LA15_31>='\u000B' && LA15_31<='\uFFFF')) && ((!isAttributeValue))) {s = 55;}
+
+                         
+                        input.seek(index15_31);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 41 : 
+                        int LA15_9 = input.LA(1);
+
+                         
+                        int index15_9 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_9>='0' && LA15_9<='9')||(LA15_9>='A' && LA15_9<='Z')||LA15_9=='_'||(LA15_9>='a' && LA15_9<='z')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 27;}
+
+                        else if ( ((LA15_9>='\u0000' && LA15_9<='/')||(LA15_9>=':' && LA15_9<='@')||(LA15_9>='[' && LA15_9<='^')||LA15_9=='`'||(LA15_9>='{' && LA15_9<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 26;
+
+                         
+                        input.seek(index15_9);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 42 : 
+                        int LA15_37 = input.LA(1);
+
+                         
+                        int index15_37 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_37>='\u0000' && LA15_37<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 56;
+
+                         
+                        input.seek(index15_37);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 43 : 
+                        int LA15_54 = input.LA(1);
+
+                         
+                        int index15_54 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_54=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 31;}
+
+                        else if ( (LA15_54=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 33;}
+
+                        else if ( (LA15_54=='\"') && (((!isAttributeValue)||(isAttributeValue)))) {s = 32;}
+
+                        else if ( (LA15_54=='\\') && (((!isAttributeValue)||(isAttributeValue)))) {s = 30;}
+
+                        else if ( ((LA15_54>='\u0000' && LA15_54<='\t')||(LA15_54>='\u000B' && LA15_54<='\f')||(LA15_54>='\u000E' && LA15_54<='!')||(LA15_54>='#' && LA15_54<='[')||(LA15_54>=']' && LA15_54<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 34;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_54);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 44 : 
+                        int LA15_53 = input.LA(1);
+
+                         
+                        int index15_53 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( ((!isAttributeValue)) ) {s = 52;}
+
+                         
+                        input.seek(index15_53);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 45 : 
+                        int LA15_56 = input.LA(1);
+
+                         
+                        int index15_56 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( ((!isAttributeValue)) ) {s = 55;}
+
+                         
+                        input.seek(index15_56);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 46 : 
+                        int LA15_69 = input.LA(1);
+
+                         
+                        int index15_69 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( ((!isAttributeValue)) ) {s = 67;}
+
+                         
+                        input.seek(index15_69);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 47 : 
+                        int LA15_65 = input.LA(1);
+
+                         
+                        int index15_65 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( ((!isAttributeValue)) ) {s = 68;}
+
+                         
+                        input.seek(index15_65);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 48 : 
+                        int LA15_13 = input.LA(1);
+
+                         
+                        int index15_13 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_13=='*') && (((!isAttributeValue)||(isAttributeValue)))) {s = 40;}
+
+                        else if ( (LA15_13=='/') && (((!isAttributeValue)||(isAttributeValue)))) {s = 41;}
+
+                        else if ( ((LA15_13>='\u0000' && LA15_13<=')')||(LA15_13>='+' && LA15_13<='.')||(LA15_13>='0' && LA15_13<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 21;
+
+                         
+                        input.seek(index15_13);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 49 : 
+                        int LA15_40 = input.LA(1);
+
+                         
+                        int index15_40 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_40=='*') && (((!isAttributeValue)||(isAttributeValue)))) {s = 58;}
+
+                        else if ( (LA15_40=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 59;}
+
+                        else if ( (LA15_40=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 60;}
+
+                        else if ( ((LA15_40>='\u0000' && LA15_40<='\t')||(LA15_40>='\u000B' && LA15_40<='\f')||(LA15_40>='\u000E' && LA15_40<=')')||(LA15_40>='+' && LA15_40<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 61;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_40);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 50 : 
+                        int LA15_49 = input.LA(1);
+
+                         
+                        int index15_49 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((isAttributeValue)) ) {s = 8;}
+
+                        else if ( ((!isAttributeValue)) ) {s = 51;}
+
+                         
+                        input.seek(index15_49);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 51 : 
+                        int LA15_4 = input.LA(1);
+
+                         
+                        int index15_4 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_4>='\u0000' && LA15_4<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 19;
+
+                         
+                        input.seek(index15_4);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 52 : 
+                        int LA15_34 = input.LA(1);
+
+                         
+                        int index15_34 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_34=='\"') && (((!isAttributeValue)||(isAttributeValue)))) {s = 32;}
+
+                        else if ( (LA15_34=='\\') && (((!isAttributeValue)||(isAttributeValue)))) {s = 30;}
+
+                        else if ( (LA15_34=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 31;}
+
+                        else if ( (LA15_34=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 33;}
+
+                        else if ( ((LA15_34>='\u0000' && LA15_34<='\t')||(LA15_34>='\u000B' && LA15_34<='\f')||(LA15_34>='\u000E' && LA15_34<='!')||(LA15_34>='#' && LA15_34<='[')||(LA15_34>=']' && LA15_34<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 34;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_34);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 53 : 
+                        int LA15_66 = input.LA(1);
+
+                         
+                        int index15_66 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_66=='*') && (((!isAttributeValue)||(isAttributeValue)))) {s = 58;}
+
+                        else if ( (LA15_66=='\r') && (((!isAttributeValue)||(isAttributeValue)))) {s = 59;}
+
+                        else if ( (LA15_66=='\n') && (((!isAttributeValue)||(isAttributeValue)))) {s = 60;}
+
+                        else if ( ((LA15_66>='\u0000' && LA15_66<='\t')||(LA15_66>='\u000B' && LA15_66<='\f')||(LA15_66>='\u000E' && LA15_66<=')')||(LA15_66>='+' && LA15_66<='\uFFFF')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 61;}
+
+                        else s = 69;
+
+                         
+                        input.seek(index15_66);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 54 : 
                         int LA15_0 = input.LA(1);
 
+                         
+                        int index15_0 = input.index();
+                        input.rewind();
                         s = -1;
                         if ( (LA15_0==',') ) {s = 1;}
 
@@ -954,20 +1944,75 @@ public class CustomAttributesLexer extends Lexer {
 
                         else if ( (LA15_0=='^') ) {s = 5;}
 
-                        else if ( ((LA15_0>='A' && LA15_0<='Z')||LA15_0=='_'||(LA15_0>='a' && LA15_0<='z')) ) {s = 6;}
+                        else if ( (LA15_0=='\r') ) {s = 6;}
 
-                        else if ( ((LA15_0>='0' && LA15_0<='9')) ) {s = 7;}
+                        else if ( (LA15_0=='\n') ) {s = 7;}
 
-                        else if ( (LA15_0=='\"') ) {s = 8;}
+                        else if ( ((LA15_0>='A' && LA15_0<='Z')||LA15_0=='_'||(LA15_0>='a' && LA15_0<='z')) ) {s = 9;}
 
-                        else if ( (LA15_0=='\'') ) {s = 9;}
+                        else if ( ((LA15_0>='0' && LA15_0<='9')) ) {s = 10;}
 
-                        else if ( (LA15_0=='/') ) {s = 10;}
+                        else if ( (LA15_0=='\"') ) {s = 11;}
 
-                        else if ( ((LA15_0>='\t' && LA15_0<='\n')||LA15_0=='\r'||LA15_0==' ') ) {s = 11;}
+                        else if ( (LA15_0=='\'') ) {s = 12;}
 
-                        else if ( ((LA15_0>='\u0000' && LA15_0<='\b')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\u001F')||LA15_0=='!'||(LA15_0>='#' && LA15_0<='&')||(LA15_0>='(' && LA15_0<='+')||(LA15_0>='-' && LA15_0<='.')||(LA15_0>=':' && LA15_0<='<')||(LA15_0>='>' && LA15_0<='@')||LA15_0=='\\'||LA15_0=='`'||(LA15_0>='{' && LA15_0<='\uFFFF')) ) {s = 12;}
+                        else if ( (LA15_0=='/') ) {s = 13;}
 
+                        else if ( (LA15_0=='\t'||LA15_0==' ') ) {s = 14;}
+
+                        else if ( ((LA15_0>='\u0000' && LA15_0<='\b')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\u001F')||LA15_0=='!'||(LA15_0>='#' && LA15_0<='&')||(LA15_0>='(' && LA15_0<='+')||(LA15_0>='-' && LA15_0<='.')||(LA15_0>=':' && LA15_0<='<')||(LA15_0>='>' && LA15_0<='@')||LA15_0=='\\'||LA15_0=='`'||(LA15_0>='{' && LA15_0<='\uFFFF')) ) {s = 15;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_0);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 55 : 
+                        int LA15_1 = input.LA(1);
+
+                         
+                        int index15_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_1>='\u0000' && LA15_1<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 16;
+
+                         
+                        input.seek(index15_1);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 56 : 
+                        int LA15_35 = input.LA(1);
+
+                         
+                        int index15_35 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA15_35=='\"'||LA15_35=='\''||LA15_35=='\\'||LA15_35=='b'||LA15_35=='f'||LA15_35=='n'||LA15_35=='r'||(LA15_35>='t' && LA15_35<='u')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 57;}
+
+                        else s = 8;
+
+                         
+                        input.seek(index15_35);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 57 : 
+                        int LA15_27 = input.LA(1);
+
+                         
+                        int index15_27 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((LA15_27>='0' && LA15_27<='9')||(LA15_27>='A' && LA15_27<='Z')||LA15_27=='_'||(LA15_27>='a' && LA15_27<='z')) && (((!isAttributeValue)||(isAttributeValue)))) {s = 27;}
+
+                        else if ( ((LA15_27>='\u0000' && LA15_27<='/')||(LA15_27>=':' && LA15_27<='@')||(LA15_27>='[' && LA15_27<='^')||LA15_27=='`'||(LA15_27>='{' && LA15_27<='\uFFFF')) && ((isAttributeValue))) {s = 8;}
+
+                        else s = 49;
+
+                         
+                        input.seek(index15_27);
                         if ( s>=0 ) return s;
                         break;
             }

@@ -254,7 +254,7 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
                 if ( (LA2_1==KEYWORD_3) ) {
                     alt2=2;
                 }
-                else if ( (LA2_1==RULE_PROPERTY_VALUE) ) {
+                else if ( (LA2_1==KEYWORD_2) ) {
                     alt2=1;
                 }
                 else {
@@ -364,21 +364,22 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleAttribute"
-    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:149:1: ruleSimpleAttribute returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_value_1_0= RULE_PROPERTY_VALUE ) ) ) ;
+    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:149:1: ruleSimpleAttribute returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_2 ( (lv_value_2_0= RULE_PROPERTY_VALUE ) ) ) ;
     public final EObject ruleSimpleAttribute() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
-        Token lv_value_1_0=null;
+        Token otherlv_1=null;
+        Token lv_value_2_0=null;
 
          enterRule(); 
             
         try {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:152:28: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_value_1_0= RULE_PROPERTY_VALUE ) ) ) )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:153:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_value_1_0= RULE_PROPERTY_VALUE ) ) )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:152:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_2 ( (lv_value_2_0= RULE_PROPERTY_VALUE ) ) ) )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:153:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_2 ( (lv_value_2_0= RULE_PROPERTY_VALUE ) ) )
             {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:153:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_value_1_0= RULE_PROPERTY_VALUE ) ) )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:153:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_value_1_0= RULE_PROPERTY_VALUE ) )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:153:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_2 ( (lv_value_2_0= RULE_PROPERTY_VALUE ) ) )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:153:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_2 ( (lv_value_2_0= RULE_PROPERTY_VALUE ) )
             {
             // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:153:2: ( (lv_name_0_0= RULE_ID ) )
             // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:154:1: (lv_name_0_0= RULE_ID )
@@ -406,15 +407,19 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:171:2: ( (lv_value_1_0= RULE_PROPERTY_VALUE ) )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:172:1: (lv_value_1_0= RULE_PROPERTY_VALUE )
-            {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:172:1: (lv_value_1_0= RULE_PROPERTY_VALUE )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:173:3: lv_value_1_0= RULE_PROPERTY_VALUE
-            {
-            lv_value_1_0=(Token)match(input,RULE_PROPERTY_VALUE,FOLLOW_RULE_PROPERTY_VALUE_in_ruleSimpleAttribute349); 
+            otherlv_1=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_ruleSimpleAttribute345); 
 
-            			newLeafNode(lv_value_1_0, grammarAccess.getSimpleAttributeAccess().getValuePROPERTY_VALUETerminalRuleCall_1_0()); 
+                	newLeafNode(otherlv_1, grammarAccess.getSimpleAttributeAccess().getEqualsSignKeyword_1());
+                
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:176:1: ( (lv_value_2_0= RULE_PROPERTY_VALUE ) )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:177:1: (lv_value_2_0= RULE_PROPERTY_VALUE )
+            {
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:177:1: (lv_value_2_0= RULE_PROPERTY_VALUE )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:178:3: lv_value_2_0= RULE_PROPERTY_VALUE
+            {
+            lv_value_2_0=(Token)match(input,RULE_PROPERTY_VALUE,FOLLOW_RULE_PROPERTY_VALUE_in_ruleSimpleAttribute361); 
+
+            			newLeafNode(lv_value_2_0, grammarAccess.getSimpleAttributeAccess().getValuePROPERTY_VALUETerminalRuleCall_2_0()); 
             		
 
             	        if (current==null) {
@@ -423,7 +428,7 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
                    		setWithLastConsumed(
                    			current, 
                    			"value",
-                    		lv_value_1_0, 
+                    		lv_value_2_0, 
                     		"PROPERTY_VALUE");
             	    
 
@@ -453,7 +458,7 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArrayAttribute"
-    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:197:1: entryRuleArrayAttribute returns [EObject current=null] : iv_ruleArrayAttribute= ruleArrayAttribute EOF ;
+    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:202:1: entryRuleArrayAttribute returns [EObject current=null] : iv_ruleArrayAttribute= ruleArrayAttribute EOF ;
     public final EObject entryRuleArrayAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -461,17 +466,17 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:198:2: (iv_ruleArrayAttribute= ruleArrayAttribute EOF )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:199:2: iv_ruleArrayAttribute= ruleArrayAttribute EOF
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:203:2: (iv_ruleArrayAttribute= ruleArrayAttribute EOF )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:204:2: iv_ruleArrayAttribute= ruleArrayAttribute EOF
             {
              newCompositeNode(grammarAccess.getArrayAttributeRule()); 
-            pushFollow(FOLLOW_ruleArrayAttribute_in_entryRuleArrayAttribute389);
+            pushFollow(FOLLOW_ruleArrayAttribute_in_entryRuleArrayAttribute401);
             iv_ruleArrayAttribute=ruleArrayAttribute();
 
             state._fsp--;
 
              current =iv_ruleArrayAttribute; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArrayAttribute399); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArrayAttribute411); 
 
             }
 
@@ -489,7 +494,7 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArrayAttribute"
-    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:206:1: ruleArrayAttribute returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )* ) ;
+    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:211:1: ruleArrayAttribute returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )* ) ;
     public final EObject ruleArrayAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -504,19 +509,19 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:209:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )* ) )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:210:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )* )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:214:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )* ) )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:215:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )* )
             {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:210:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )* )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:210:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )*
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:215:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )* )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:215:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= KEYWORD_3 otherlv_2= KEYWORD_4 otherlv_3= KEYWORD_2 ( (lv_items_4_0= RULE_STRING ) )? (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )*
             {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:210:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:211:1: (lv_name_0_0= RULE_ID )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:215:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:216:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:211:1: (lv_name_0_0= RULE_ID )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:212:3: lv_name_0_0= RULE_ID
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:216:1: (lv_name_0_0= RULE_ID )
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:217:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArrayAttribute441); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArrayAttribute453); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getArrayAttributeAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -536,19 +541,19 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,KEYWORD_3,FOLLOW_KEYWORD_3_in_ruleArrayAttribute459); 
+            otherlv_1=(Token)match(input,KEYWORD_3,FOLLOW_KEYWORD_3_in_ruleArrayAttribute471); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getArrayAttributeAccess().getLeftSquareBracketKeyword_1());
                 
-            otherlv_2=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleArrayAttribute471); 
+            otherlv_2=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleArrayAttribute483); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getArrayAttributeAccess().getRightSquareBracketKeyword_2());
                 
-            otherlv_3=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_ruleArrayAttribute483); 
+            otherlv_3=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_ruleArrayAttribute495); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getArrayAttributeAccess().getEqualsSignKeyword_3());
                 
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:243:1: ( (lv_items_4_0= RULE_STRING ) )?
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:248:1: ( (lv_items_4_0= RULE_STRING ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -557,12 +562,12 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:244:1: (lv_items_4_0= RULE_STRING )
+                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:249:1: (lv_items_4_0= RULE_STRING )
                     {
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:244:1: (lv_items_4_0= RULE_STRING )
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:245:3: lv_items_4_0= RULE_STRING
+                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:249:1: (lv_items_4_0= RULE_STRING )
+                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:250:3: lv_items_4_0= RULE_STRING
                     {
-                    lv_items_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleArrayAttribute499); 
+                    lv_items_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleArrayAttribute511); 
 
                     			newLeafNode(lv_items_4_0, grammarAccess.getArrayAttributeAccess().getItemsSTRINGTerminalRuleCall_4_0()); 
                     		
@@ -585,7 +590,7 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:261:3: (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )*
+            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:266:3: (otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) ) )*
             loop4:
             do {
                 int alt4=2;
@@ -598,19 +603,19 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:262:2: otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) )
+            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:267:2: otherlv_5= KEYWORD_1 ( (lv_items_6_0= RULE_STRING ) )
             	    {
-            	    otherlv_5=(Token)match(input,KEYWORD_1,FOLLOW_KEYWORD_1_in_ruleArrayAttribute519); 
+            	    otherlv_5=(Token)match(input,KEYWORD_1,FOLLOW_KEYWORD_1_in_ruleArrayAttribute531); 
 
             	        	newLeafNode(otherlv_5, grammarAccess.getArrayAttributeAccess().getCommaKeyword_5_0());
             	        
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:266:1: ( (lv_items_6_0= RULE_STRING ) )
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:267:1: (lv_items_6_0= RULE_STRING )
+            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:271:1: ( (lv_items_6_0= RULE_STRING ) )
+            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:272:1: (lv_items_6_0= RULE_STRING )
             	    {
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:267:1: (lv_items_6_0= RULE_STRING )
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:268:3: lv_items_6_0= RULE_STRING
+            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:272:1: (lv_items_6_0= RULE_STRING )
+            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/internal/InternalAttributesParser.g:273:3: lv_items_6_0= RULE_STRING
             	    {
-            	    lv_items_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleArrayAttribute535); 
+            	    lv_items_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleArrayAttribute547); 
 
             	    			newLeafNode(lv_items_6_0, grammarAccess.getArrayAttributeAccess().getItemsSTRINGTerminalRuleCall_5_1_0()); 
             	    		
@@ -672,16 +677,17 @@ public class InternalAttributesParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleArrayAttribute_in_ruleAttribute241 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSimpleAttribute_in_entryRuleSimpleAttribute275 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSimpleAttribute285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSimpleAttribute327 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_PROPERTY_VALUE_in_ruleSimpleAttribute349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArrayAttribute_in_entryRuleArrayAttribute389 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArrayAttribute399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleArrayAttribute441 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_KEYWORD_3_in_ruleArrayAttribute459 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_ruleArrayAttribute471 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_KEYWORD_2_in_ruleArrayAttribute483 = new BitSet(new long[]{0x0000000000000812L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleArrayAttribute499 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_KEYWORD_1_in_ruleArrayAttribute519 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleArrayAttribute535 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSimpleAttribute327 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_KEYWORD_2_in_ruleSimpleAttribute345 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_PROPERTY_VALUE_in_ruleSimpleAttribute361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArrayAttribute_in_entryRuleArrayAttribute401 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArrayAttribute411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleArrayAttribute453 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_KEYWORD_3_in_ruleArrayAttribute471 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleArrayAttribute483 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_KEYWORD_2_in_ruleArrayAttribute495 = new BitSet(new long[]{0x0000000000000812L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleArrayAttribute511 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_KEYWORD_1_in_ruleArrayAttribute531 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleArrayAttribute547 = new BitSet(new long[]{0x0000000000000012L});
 
 }

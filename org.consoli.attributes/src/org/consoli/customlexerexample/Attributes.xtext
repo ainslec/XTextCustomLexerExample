@@ -10,7 +10,7 @@ Attribute:
 ;	
 
 SimpleAttribute:
-	name=ID value=PROPERTY_VALUE
+	name=ID '=' value=PROPERTY_VALUE
 ;
 
 ArrayAttribute:
@@ -18,4 +18,4 @@ ArrayAttribute:
 ;
 	
 terminal PROPERTY_VALUE:
-	('=') !('\n' | '\r')* ('\r'? '\n')?;
+	!('\n' | '\r')* ('\r'? '\n')?;

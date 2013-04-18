@@ -43,7 +43,7 @@ public class AttributesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getArrayAttributeAccess().getGroup_5(), "rule__ArrayAttribute__Group_5__0");
 					put(grammarAccess.getModelAccess().getAttributesAssignment(), "rule__Model__AttributesAssignment");
 					put(grammarAccess.getSimpleAttributeAccess().getNameAssignment_0(), "rule__SimpleAttribute__NameAssignment_0");
-					put(grammarAccess.getSimpleAttributeAccess().getValueAssignment_1(), "rule__SimpleAttribute__ValueAssignment_1");
+					put(grammarAccess.getSimpleAttributeAccess().getValueAssignment_2(), "rule__SimpleAttribute__ValueAssignment_2");
 					put(grammarAccess.getArrayAttributeAccess().getNameAssignment_0(), "rule__ArrayAttribute__NameAssignment_0");
 					put(grammarAccess.getArrayAttributeAccess().getItemsAssignment_4(), "rule__ArrayAttribute__ItemsAssignment_4");
 					put(grammarAccess.getArrayAttributeAccess().getItemsAssignment_5_1(), "rule__ArrayAttribute__ItemsAssignment_5_1");

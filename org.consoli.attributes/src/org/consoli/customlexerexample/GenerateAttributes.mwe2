@@ -41,14 +41,8 @@ Workflow {
     
     		// generates Java API for the generated EPackages
     		fragment = ecore.EcoreGeneratorFragment auto-inject {
-    		// referencedGenModels = "
-    		//  platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel,
-    		//  platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel
-    		// "
     		}
     
-    		// the old serialization component
-    		// fragment = parseTreeConstructor.ParseTreeConstructorFragment auto-inject {}    
     
     		// serializer 2.0
     		fragment = serializer.SerializerFragment auto-inject {
@@ -57,13 +51,6 @@ Workflow {
     
     		// a custom ResourceFactory for use with EMF
     		fragment = resourceFactory.ResourceFactoryFragment auto-inject {}
-    
-//    		// The antlr parser generator fragment.
-//    		fragment = parser.antlr.XtextAntlrGeneratorFragment auto-inject {
-//    		//  options = {
-//    		//      backtrack = true
-//    		//  }
-//    		}
 
 			fragment = org.eclipse.xtext.generator.parser.antlr.ex.rt.AntlrGeneratorFragment {
 			    options = {
@@ -80,16 +67,9 @@ Workflow {
 			    antlrParam = "${runtimeProject}/src-gen/org/consoli/customlexerexample/lexer"
 			}
 			
-    
     		// Xtend-based API for validation
     		fragment = validation.ValidatorFragment auto-inject {
-    		//    composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
-    		//    composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
     		}
-    
-    		// old scoping and exporting API
-    		// fragment = scoping.ImportURIScopingFragment auto-inject {}
-    		// fragment = exporting.SimpleNamesFragment auto-inject {}
     
     		// scoping and exporting API
     		fragment = scoping.ImportNamespacesScopingFragment auto-inject {}
@@ -111,21 +91,23 @@ Workflow {
     
     		// quickfix API
     		fragment = quickfix.QuickfixProviderFragment auto-inject {}
-    
-    		// content assist API
-    		fragment = contentAssist.ContentAssistFragment auto-inject {}
-    
-    		// generates a more lightweight Antlr parser and lexer tailored for content assist
-    		fragment = parser.antlr.XtextAntlrUiGeneratorFragment auto-inject {}
-    
+    		
+    	    // content assist API  
+
+				//These next two fragments will generate a separate  lexer and parser for contentassist
+				fragment = contentAssist.JavaBasedContentAssistFragment { }
+	
+				fragment = org.eclipse.xtext.generator.parser.antlr.ex.ca.ContentAssistParserGeneratorFragment	{
+	        	antlrParam = "-Xconversiontimeout" antlrParam = "10000"
+					options = {
+						backtrack = false
+					}
+				}
+    		// end content assist api
+    		
     		// generates junit test support classes into Generator#pathTestProject
     		fragment = junit.Junit4Fragment auto-inject {}
-    
-    		// project wizard (optional)
-    		// fragment = projectWizard.SimpleProjectWizardFragment auto-inject {
-    		//      generatorProjectName = "${projectName}"
-    		// }
-    
+
     		// rename refactoring
     		fragment = refactoring.RefactorElementNameFragment auto-inject {}
     

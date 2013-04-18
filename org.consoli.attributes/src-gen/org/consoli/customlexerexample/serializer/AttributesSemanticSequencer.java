@@ -83,7 +83,7 @@ public class AttributesSemanticSequencer extends AbstractDelegatingSemanticSeque
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getSimpleAttributeAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getSimpleAttributeAccess().getValuePROPERTY_VALUETerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getSimpleAttributeAccess().getValuePROPERTY_VALUETerminalRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 }

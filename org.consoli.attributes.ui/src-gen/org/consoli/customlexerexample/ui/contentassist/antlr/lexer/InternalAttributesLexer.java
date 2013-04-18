@@ -1,8 +1,8 @@
-package org.consoli.customlexerexample.parser.antlr.lexer;
+package org.consoli.customlexerexample.ui.contentassist.antlr.lexer;
 
 // Hack: Use our own Lexer superclass by means of import. 
 // Currently there is no other way to specify the superclass for the lexer.
-import org.eclipse.xtext.parser.antlr.Lexer;
+import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer;
 
 
 import org.antlr.runtime.*;
@@ -37,15 +37,15 @@ public class InternalAttributesLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g"; }
+    public String getGrammarFileName() { return "../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g"; }
 
     // $ANTLR start "KEYWORD_1"
     public final void mKEYWORD_1() throws RecognitionException {
         try {
             int _type = KEYWORD_1;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:19:11: ( ',' )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:19:13: ','
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:19:11: ( ',' )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:19:13: ','
             {
             match(','); 
 
@@ -64,8 +64,8 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_2;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:21:11: ( '=' )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:21:13: '='
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:21:11: ( '=' )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:21:13: '='
             {
             match('='); 
 
@@ -84,8 +84,8 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_3;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:23:11: ( '[' )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:23:13: '['
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:23:11: ( '[' )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:23:13: '['
             {
             match('['); 
 
@@ -104,8 +104,8 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_4;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:25:11: ( ']' )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:25:13: ']'
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:25:11: ( ']' )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:25:13: ']'
             {
             match(']'); 
 
@@ -124,10 +124,10 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = RULE_PROPERTY_VALUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:29:21: ( (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:29:23: (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:29:21: ( (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:29:23: (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:29:23: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:29:23: (~ ( ( '\\n' | '\\r' ) ) )*
             loop1:
             do {
                 int alt1=2;
@@ -140,7 +140,7 @@ public class InternalAttributesLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:29:23: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:29:23: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -160,7 +160,7 @@ public class InternalAttributesLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:29:39: ( ( '\\r' )? '\\n' )?
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:29:39: ( ( '\\r' )? '\\n' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -169,9 +169,9 @@ public class InternalAttributesLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:29:40: ( '\\r' )? '\\n'
+                    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:29:40: ( '\\r' )? '\\n'
                     {
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:29:40: ( '\\r' )?
+                    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:29:40: ( '\\r' )?
                     int alt2=2;
                     int LA2_0 = input.LA(1);
 
@@ -180,7 +180,7 @@ public class InternalAttributesLexer extends Lexer {
                     }
                     switch (alt2) {
                         case 1 :
-                            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:29:40: '\\r'
+                            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:29:40: '\\r'
                             {
                             match('\r'); 
 
@@ -212,10 +212,10 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:31:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:31:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:31:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:31:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:31:11: ( '^' )?
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:31:11: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -224,7 +224,7 @@ public class InternalAttributesLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:31:11: '^'
+                    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:31:11: '^'
                     {
                     match('^'); 
 
@@ -242,7 +242,7 @@ public class InternalAttributesLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:31:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:31:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -255,7 +255,7 @@ public class InternalAttributesLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:
+            	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -291,10 +291,10 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:33:10: ( ( '0' .. '9' )+ )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:33:12: ( '0' .. '9' )+
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:33:10: ( ( '0' .. '9' )+ )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:33:12: ( '0' .. '9' )+
             {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:33:12: ( '0' .. '9' )+
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:33:12: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -308,7 +308,7 @@ public class InternalAttributesLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:33:13: '0' .. '9'
+            	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:33:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -340,10 +340,10 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -361,10 +361,10 @@ public class InternalAttributesLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -380,7 +380,7 @@ public class InternalAttributesLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -396,7 +396,7 @@ public class InternalAttributesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -421,10 +421,10 @@ public class InternalAttributesLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -440,7 +440,7 @@ public class InternalAttributesLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -456,7 +456,7 @@ public class InternalAttributesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:35:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:35:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -499,12 +499,12 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:37:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:37:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:37:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:37:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:37:24: ( options {greedy=false; } : . )*
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:37:24: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -529,7 +529,7 @@ public class InternalAttributesLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:37:52: .
+            	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:37:52: .
             	    {
             	    matchAny(); 
 
@@ -559,12 +559,12 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:39:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:39:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:39:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:39:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:39:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:39:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -577,7 +577,7 @@ public class InternalAttributesLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:39:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:39:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -597,7 +597,7 @@ public class InternalAttributesLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:39:40: ( ( '\\r' )? '\\n' )?
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:39:40: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -606,9 +606,9 @@ public class InternalAttributesLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:39:41: ( '\\r' )? '\\n'
+                    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:39:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:39:41: ( '\\r' )?
+                    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:39:41: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -617,7 +617,7 @@ public class InternalAttributesLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:39:41: '\\r'
+                            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:39:41: '\\r'
                             {
                             match('\r'); 
 
@@ -649,10 +649,10 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:41:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:41:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:41:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:41:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:41:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:41:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -666,7 +666,7 @@ public class InternalAttributesLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:
+            	    // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -706,8 +706,8 @@ public class InternalAttributesLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:43:16: ( . )
-            // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:43:18: .
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:43:16: ( . )
+            // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:43:18: .
             {
             matchAny(); 
 
@@ -722,89 +722,89 @@ public class InternalAttributesLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:8: ( KEYWORD_1 | KEYWORD_2 | KEYWORD_3 | KEYWORD_4 | RULE_PROPERTY_VALUE | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:8: ( KEYWORD_1 | KEYWORD_2 | KEYWORD_3 | KEYWORD_4 | RULE_PROPERTY_VALUE | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt15=12;
         alt15 = dfa15.predict(input);
         switch (alt15) {
             case 1 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:10: KEYWORD_1
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:10: KEYWORD_1
                 {
                 mKEYWORD_1(); 
 
                 }
                 break;
             case 2 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:20: KEYWORD_2
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:20: KEYWORD_2
                 {
                 mKEYWORD_2(); 
 
                 }
                 break;
             case 3 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:30: KEYWORD_3
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:30: KEYWORD_3
                 {
                 mKEYWORD_3(); 
 
                 }
                 break;
             case 4 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:40: KEYWORD_4
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:40: KEYWORD_4
                 {
                 mKEYWORD_4(); 
 
                 }
                 break;
             case 5 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:50: RULE_PROPERTY_VALUE
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:50: RULE_PROPERTY_VALUE
                 {
                 mRULE_PROPERTY_VALUE(); 
 
                 }
                 break;
             case 6 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:70: RULE_ID
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:70: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 7 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:78: RULE_INT
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:78: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 8 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:87: RULE_STRING
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:87: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 9 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:99: RULE_ML_COMMENT
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:99: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 10 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:115: RULE_SL_COMMENT
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:115: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 11 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:131: RULE_WS
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:131: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 12 :
-                // ../org.consoli.attributes/src-gen/org/consoli/customlexerexample/parser/antlr/lexer/InternalAttributesLexer.g:1:139: RULE_ANY_OTHER
+                // ../org.consoli.attributes.ui/src-gen/org/consoli/customlexerexample/ui/contentassist/antlr/lexer/InternalAttributesLexer.g:1:139: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 

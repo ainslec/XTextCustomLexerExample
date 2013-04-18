@@ -61,15 +61,16 @@ public class AttributesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValuePROPERTY_VALUETerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValuePROPERTY_VALUETerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
 		//SimpleAttribute:
 		//
-		//	name=ID value=PROPERTY_VALUE;
+		//	name=ID "=" value=PROPERTY_VALUE;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID value=PROPERTY_VALUE
+		//name=ID "=" value=PROPERTY_VALUE
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -78,11 +79,14 @@ public class AttributesGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
 
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
 		//value=PROPERTY_VALUE
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
 
 		//PROPERTY_VALUE
-		public RuleCall getValuePROPERTY_VALUETerminalRuleCall_1_0() { return cValuePROPERTY_VALUETerminalRuleCall_1_0; }
+		public RuleCall getValuePROPERTY_VALUETerminalRuleCall_2_0() { return cValuePROPERTY_VALUETerminalRuleCall_2_0; }
 	}
 
 	public class ArrayAttributeElements extends AbstractParserRuleElementFinder {
@@ -211,7 +215,7 @@ public class AttributesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//SimpleAttribute:
 	//
-	//	name=ID value=PROPERTY_VALUE;
+	//	name=ID "=" value=PROPERTY_VALUE;
 	public SimpleAttributeElements getSimpleAttributeAccess() {
 		return (pSimpleAttribute != null) ? pSimpleAttribute : (pSimpleAttribute = new SimpleAttributeElements());
 	}
@@ -233,7 +237,7 @@ public class AttributesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//terminal PROPERTY_VALUE:
 	//
-	//	"=" !("\n" | "\r")* ("\r"? "\n")?;
+	//	!("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getPROPERTY_VALUERule() {
 		return (tPROPERTY_VALUE != null) ? tPROPERTY_VALUE : (tPROPERTY_VALUE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "PROPERTY_VALUE"));
 	} 

@@ -21,16 +21,17 @@ Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.consoli.customlexerexample,
- org.consoli.customlexerexample.services,
  org.consoli.customlexerexample.attributes,
  org.consoli.customlexerexample.attributes.impl,
  org.consoli.customlexerexample.attributes.util,
- org.consoli.customlexerexample.serializer,
+ org.consoli.customlexerexample.formatting,
+ org.consoli.customlexerexample.generator,
+ org.consoli.customlexerexample.lexer,
  org.consoli.customlexerexample.parser.antlr,
  org.consoli.customlexerexample.parser.antlr.internal,
- org.consoli.customlexerexample.validation,
+ org.consoli.customlexerexample.parser.antlr.lexer,
  org.consoli.customlexerexample.scoping,
- org.consoli.customlexerexample.generator,
- org.consoli.customlexerexample.formatting,
- org.consoli.customlexerexample.parser.antlr.lexer
+ org.consoli.customlexerexample.serializer,
+ org.consoli.customlexerexample.services,
+ org.consoli.customlexerexample.validation
 

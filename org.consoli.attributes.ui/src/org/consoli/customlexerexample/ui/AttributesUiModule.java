@@ -3,7 +3,10 @@
  */
 package org.consoli.customlexerexample.ui;
 
+import org.consoli.customlexerexample.lexer.CustomAttributesLexer;
+import org.consoli.customlexerexample.ui.lexer.ContentAssistLexerDelegate;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+
 
 /**
  * Use this class to register components to be used within the IDE.
@@ -11,5 +14,12 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 public class AttributesUiModule extends org.consoli.customlexerexample.ui.AbstractAttributesUiModule {
 	public AttributesUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
+	}
+	
+	/**
+	 * This will delegate the lexing via {@link ContentAssistLexerDelegate} to {@link CustomAttributesLexer} 
+	 */
+	public void configureContentAssistLexer(com.google.inject.Binder binder) {
+		binder.bind(org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.ui.LexerUIBindings.CONTENT_ASSIST)).to(ContentAssistLexerDelegate.class);
 	}
 }

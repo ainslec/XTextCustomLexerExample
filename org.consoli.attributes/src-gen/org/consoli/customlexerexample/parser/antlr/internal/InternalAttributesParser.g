@@ -168,11 +168,16 @@ ruleSimpleAttribute returns [EObject current=null]
 	    }
 
 )
-)(
+)
+	otherlv_1=KEYWORD_2
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getSimpleAttributeAccess().getEqualsSignKeyword_1());
+    }
 (
-		lv_value_1_0=RULE_PROPERTY_VALUE
+(
+		lv_value_2_0=RULE_PROPERTY_VALUE
 		{
-			newLeafNode(lv_value_1_0, grammarAccess.getSimpleAttributeAccess().getValuePROPERTY_VALUETerminalRuleCall_1_0()); 
+			newLeafNode(lv_value_2_0, grammarAccess.getSimpleAttributeAccess().getValuePROPERTY_VALUETerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -181,7 +186,7 @@ ruleSimpleAttribute returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"value",
-        		lv_value_1_0, 
+        		lv_value_2_0, 
         		"PROPERTY_VALUE");
 	    }
 
