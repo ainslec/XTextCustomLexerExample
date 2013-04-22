@@ -84,7 +84,7 @@ public abstract class AbstractAttributesRuntimeModule extends DefaultRuntimeModu
 		return org.eclipse.xtext.parser.antlr.AntlrTokenDefProvider.class;
 	}
 
-	// contributed by org.eclipse.xtext.generator.parser.antlr.ex.ExternalAntlrLexerFragment
+	// contributed by org.consoli.xtext.generator.parser.antlr.ex.CustomLexerFragment$ExternalAntlrLexerFragment2
 	public void configureRuntimeLexer(com.google.inject.Binder binder) {
 		binder.bind(org.eclipse.xtext.parser.antlr.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.parser.antlr.LexerBindings.RUNTIME)).to(org.consoli.customlexerexample.lexer.CustomAttributesLexer.class);
 	}

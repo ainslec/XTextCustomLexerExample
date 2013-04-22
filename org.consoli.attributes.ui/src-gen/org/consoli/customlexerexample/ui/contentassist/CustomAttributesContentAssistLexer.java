@@ -1,5 +1,5 @@
-package org.consoli.customlexerexample.lexer;
-import org.eclipse.xtext.parser.antlr.Lexer;
+package org.consoli.customlexerexample.ui.contentassist;
+import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer;
 
 
 import org.antlr.runtime.*;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 @SuppressWarnings("all")
-public class CustomAttributesLexer extends Lexer {
+public class CustomAttributesContentAssistLexer extends Lexer {
     public static final int RULE_ID=9;
     public static final int RULE_STRING=11;
     public static final int RULE_ANY_OTHER=15;
@@ -30,23 +30,23 @@ public class CustomAttributesLexer extends Lexer {
     // delegates
     // delegators
 
-    public CustomAttributesLexer() {;} 
-    public CustomAttributesLexer(CharStream input) {
+    public CustomAttributesContentAssistLexer() {;} 
+    public CustomAttributesContentAssistLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
-    public CustomAttributesLexer(CharStream input, RecognizerSharedState state) {
+    public CustomAttributesContentAssistLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g"; }
+    public String getGrammarFileName() { return "D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g"; }
 
     // $ANTLR start "KEYWORD_1"
     public final void mKEYWORD_1() throws RecognitionException {
         try {
             int _type = KEYWORD_1;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:16:11: ({...}? => ',' )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:16:13: {...}? => ','
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:16:11: ({...}? => ',' )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:16:13: {...}? => ','
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "KEYWORD_1", "!isAttributeValue");
@@ -68,8 +68,8 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_2;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:17:11: ({...}? => '=' )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:17:13: {...}? => '='
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:17:11: ({...}? => '=' )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:17:13: {...}? => '='
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "KEYWORD_2", "!isAttributeValue");
@@ -92,8 +92,8 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_3;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:18:11: ({...}? => '[' )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:18:13: {...}? => '['
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:18:11: ({...}? => '[' )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:18:13: {...}? => '['
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "KEYWORD_3", "!isAttributeValue");
@@ -115,8 +115,8 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = KEYWORD_4;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:19:11: ({...}? => ']' )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:19:13: {...}? => ']'
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:19:11: ({...}? => ']' )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:19:13: {...}? => ']'
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "KEYWORD_4", "!isAttributeValue");
@@ -139,13 +139,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_PROPERTY_VALUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:21:21: ({...}? => (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:21:23: {...}? => (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:21:21: ({...}? => (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:21:23: {...}? => (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             if ( !((isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "RULE_PROPERTY_VALUE", "isAttributeValue");
             }
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:21:45: (~ ( ( '\\n' | '\\r' ) ) )*
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:21:45: (~ ( ( '\\n' | '\\r' ) ) )*
             loop1:
             do {
                 int alt1=2;
@@ -158,7 +158,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:21:45: ~ ( ( '\\n' | '\\r' ) )
+            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:21:45: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -178,7 +178,7 @@ public class CustomAttributesLexer extends Lexer {
                 }
             } while (true);
 
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:21:61: ( ( '\\r' )? '\\n' )?
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:21:61: ( ( '\\r' )? '\\n' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -187,9 +187,9 @@ public class CustomAttributesLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:21:62: ( '\\r' )? '\\n'
+                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:21:62: ( '\\r' )? '\\n'
                     {
-                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:21:62: ( '\\r' )?
+                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:21:62: ( '\\r' )?
                     int alt2=2;
                     int LA2_0 = input.LA(1);
 
@@ -198,7 +198,7 @@ public class CustomAttributesLexer extends Lexer {
                     }
                     switch (alt2) {
                         case 1 :
-                            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:21:62: '\\r'
+                            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:21:62: '\\r'
                             {
                             match('\r'); 
 
@@ -231,13 +231,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:22:9: ({...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:22:11: {...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:22:9: ({...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:22:11: {...}? => ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "RULE_ID", "!isAttributeValue");
             }
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:22:34: ( '^' )?
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:22:34: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -246,7 +246,7 @@ public class CustomAttributesLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:22:34: '^'
+                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:22:34: '^'
                     {
                     match('^'); 
 
@@ -264,7 +264,7 @@ public class CustomAttributesLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:22:63: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:22:63: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -277,7 +277,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:
+            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -314,13 +314,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:23:10: ({...}? => ( '0' .. '9' )+ )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:23:12: {...}? => ( '0' .. '9' )+
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:23:10: ({...}? => ( '0' .. '9' )+ )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:23:12: {...}? => ( '0' .. '9' )+
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "RULE_INT", "!isAttributeValue");
             }
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:23:35: ( '0' .. '9' )+
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:23:35: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -334,7 +334,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:23:36: '0' .. '9'
+            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:23:36: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -366,13 +366,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:13: ({...}? => ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:15: {...}? => ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:13: ({...}? => ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:15: {...}? => ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "RULE_STRING", "!isAttributeValue");
             }
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:38: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:38: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -390,10 +390,10 @@ public class CustomAttributesLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:39: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:39: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:43: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:43: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -409,7 +409,7 @@ public class CustomAttributesLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:44: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:44: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -425,7 +425,7 @@ public class CustomAttributesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:89: ~ ( ( '\\\\' | '\"' ) )
+                    	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:89: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -450,10 +450,10 @@ public class CustomAttributesLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:109: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:109: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:114: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:114: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -469,7 +469,7 @@ public class CustomAttributesLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:115: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:115: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -485,7 +485,7 @@ public class CustomAttributesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:24:160: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:24:160: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -528,15 +528,15 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:25:17: ({...}? => '/*' ( options {greedy=false; } : . )* '*/' )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:25:19: {...}? => '/*' ( options {greedy=false; } : . )* '*/'
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:25:17: ({...}? => '/*' ( options {greedy=false; } : . )* '*/' )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:25:19: {...}? => '/*' ( options {greedy=false; } : . )* '*/'
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "RULE_ML_COMMENT", "!isAttributeValue");
             }
             match("/*"); 
 
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:25:47: ( options {greedy=false; } : . )*
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:25:47: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -561,7 +561,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:25:75: .
+            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:25:75: .
             	    {
             	    matchAny(); 
 
@@ -591,15 +591,15 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:26:17: ({...}? => '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:26:19: {...}? => '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:26:17: ({...}? => '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:26:19: {...}? => '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "RULE_SL_COMMENT", "!isAttributeValue");
             }
             match("//"); 
 
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:26:47: (~ ( ( '\\n' | '\\r' ) ) )*
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:26:47: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -612,7 +612,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:26:47: ~ ( ( '\\n' | '\\r' ) )
+            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:26:47: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -632,7 +632,7 @@ public class CustomAttributesLexer extends Lexer {
                 }
             } while (true);
 
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:26:63: ( ( '\\r' )? '\\n' )?
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:26:63: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -641,9 +641,9 @@ public class CustomAttributesLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:26:64: ( '\\r' )? '\\n'
+                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:26:64: ( '\\r' )? '\\n'
                     {
-                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:26:64: ( '\\r' )?
+                    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:26:64: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -652,7 +652,7 @@ public class CustomAttributesLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:26:64: '\\r'
+                            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:26:64: '\\r'
                             {
                             match('\r'); 
 
@@ -684,13 +684,13 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:27:9: ({...}? => ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:27:11: {...}? => ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:27:9: ({...}? => ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:27:11: {...}? => ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
             if ( !((!isAttributeValue)) ) {
                 throw new FailedPredicateException(input, "RULE_WS", "!isAttributeValue");
             }
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:27:34: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:27:34: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -704,7 +704,7 @@ public class CustomAttributesLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:
+            	    // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -744,8 +744,8 @@ public class CustomAttributesLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:28:16: ( . )
-            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:28:18: .
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:28:16: ( . )
+            // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:28:18: .
             {
             matchAny(); 
 
@@ -760,89 +760,89 @@ public class CustomAttributesLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:8: ( KEYWORD_1 | KEYWORD_2 | KEYWORD_3 | KEYWORD_4 | RULE_PROPERTY_VALUE | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:8: ( KEYWORD_1 | KEYWORD_2 | KEYWORD_3 | KEYWORD_4 | RULE_PROPERTY_VALUE | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt15=12;
         alt15 = dfa15.predict(input);
         switch (alt15) {
             case 1 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:10: KEYWORD_1
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:10: KEYWORD_1
                 {
                 mKEYWORD_1(); 
 
                 }
                 break;
             case 2 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:20: KEYWORD_2
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:20: KEYWORD_2
                 {
                 mKEYWORD_2(); 
 
                 }
                 break;
             case 3 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:30: KEYWORD_3
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:30: KEYWORD_3
                 {
                 mKEYWORD_3(); 
 
                 }
                 break;
             case 4 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:40: KEYWORD_4
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:40: KEYWORD_4
                 {
                 mKEYWORD_4(); 
 
                 }
                 break;
             case 5 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:50: RULE_PROPERTY_VALUE
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:50: RULE_PROPERTY_VALUE
                 {
                 mRULE_PROPERTY_VALUE(); 
 
                 }
                 break;
             case 6 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:70: RULE_ID
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:70: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 7 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:78: RULE_INT
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:78: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 8 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:87: RULE_STRING
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:87: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 9 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:99: RULE_ML_COMMENT
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:99: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 10 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:115: RULE_SL_COMMENT
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:115: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 11 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:131: RULE_WS
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:131: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 12 :
-                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes\\src-gen\\org\\consoli\\customlexerexample\\lexer\\CustomAttributesLexer.g:1:139: RULE_ANY_OTHER
+                // D:\\projects\\public\\XTextCustomLexerExample\\org.consoli.attributes\\..\\org.consoli.attributes.ui\\src-gen\\org\\consoli\\customlexerexample\\ui\\contentassist\\CustomAttributesContentAssistLexer.g:1:139: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 

@@ -52,20 +52,27 @@ Workflow {
     		// a custom ResourceFactory for use with EMF
     		fragment = resourceFactory.ResourceFactoryFragment auto-inject {}
 
-			fragment = org.eclipse.xtext.generator.parser.antlr.ex.rt.AntlrGeneratorFragment {
-			    options = {
-			        backtrack = false
-			        backtrackLexer = false
-			    }
-			}
-			
-			// Use externally specified lexer
-			fragment = parser.antlr.ex.ExternalAntlrLexerFragment {
-			    lexerGrammar = "org.consoli.customlexerexample.lexer.CustomAttributesLexer"
-			    runtime = true
-			    antlrParam = "-lib"
-			    antlrParam = "${runtimeProject}/src-gen/org/consoli/customlexerexample/lexer"
-			}
+
+			// -----------------------------------------------------------------------------------
+			// START OF CUSTOM LEXING SETUP
+			// ------------------------------------------------------------------------------------
+		    /**
+		     * Generates:
+		     *    1) Internal lexer/parser (based on .xtext grammar)
+		     *    2) Runtime/Content-assist/Highlighting Custom lexers based on languageName + "Lexer.g"
+		     *       in the grammar package (user must create the custom lexer first of course).
+		     * 
+		     *    NOTE :: No need to alter packages or imports in custom lexer .g file as this will be handled automatically.
+		     */
+		    fragment = org.consoli.xtext.generator.parser.antlr.ex.CustomLexerFragment {
+  				grammarPackage = "org.consoli.customlexerexample"
+    			languageName = "CustomAttributes"
+    			options = { }
+		    }
+		    
+			// -----------------------------------------------------------------------------------
+			// END OF CUSTOM LEXING SETUP
+			// ------------------------------------------------------------------------------------
 			
     		// Xtend-based API for validation
     		fragment = validation.ValidatorFragment auto-inject {
@@ -92,18 +99,7 @@ Workflow {
     		// quickfix API
     		fragment = quickfix.QuickfixProviderFragment auto-inject {}
     		
-    	    // content assist API  
-
-				//These next two fragments will generate a separate  lexer and parser for contentassist
-				fragment = contentAssist.JavaBasedContentAssistFragment { }
-	
-				fragment = org.eclipse.xtext.generator.parser.antlr.ex.ca.ContentAssistParserGeneratorFragment	{
-	        	antlrParam = "-Xconversiontimeout" antlrParam = "10000"
-					options = {
-						backtrack = false
-					}
-				}
-    		// end content assist api
+			fragment = contentAssist.JavaBasedContentAssistFragment { }
     		
     		// generates junit test support classes into Generator#pathTestProject
     		fragment = junit.Junit4Fragment auto-inject {}
